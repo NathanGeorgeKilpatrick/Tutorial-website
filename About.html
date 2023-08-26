@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Guitar Tutorial | About</title>
+        <link rel="stylesheet" href="CSS/CSS.css">
+    </head>
+    <body>
+        <!--This is the header-->
+        <header id="topArrowdestination">
+            <a href="#topArrowdestination"><img id="toparrow" alt="Top Arrow" src="Images/Up_Arrow.png"></a> <!--https://pixabay.com/illustrations/app-application-arrow-back-button-1646212/-->
+            <div class="container">
+                <div>
+                    <a href="Index.html"><img alt="Guitar Logo" src="Images/Site%20Logo.png"></a> <!--https://pixabay.com/vectors/retro-floral-flowers-decorative-1254595/-->
+                    <h1><span class="BigTitle">Guitar</span> tutorial</h1>
+                
+                    <!--Login and Signup Forms-->
+                    <button class="button_1" onclick="document.getElementById('logInForm').style.display='block'" style="width:auto;">Login</button>
+        
+                    <div id="logInForm" class="modal">
+                    
+                        <form method="post"  class="from_content">
+                            <div class="popuplogo">
+                              <img src="Images/Site%20Logo.png" alt="Logo" class="loginavatar">
+                            </div>
+                            <div class="container">
+                                
+                                <b>Username</b>
+                                <input type="text" name="usrname" placeholder="Enter Username" required>
+                            
+                                <b>Password</b>
+                                <input type="password" placeholder="Enter Password" required>
+                            
+                                <button class="button_1" type="submit" onclick='check(); return false'>Login</button>
+                                <label>
+                                  <input type="checkbox" checked="checked"> Remember me
+                                </label>
+                            </div>
+                            
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('logInForm').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>              
+                    </div> 
+                
+                 <!-- Sign up form-->
+                <button class="button_1" onclick="document.getElementById('signUpForm').style.display='block'" style="width:auto;">Signup</button>
+        
+                    <div id="signUpForm" class="modal">
+                    
+                        <form method="post"  class="from_content">
+                            <div class="popuplogo">
+                              <img src="Images/Site%20Logo.png" alt="Logo" class="loginavatar">
+                            </div>
+                            <div class="container">
+                                
+                                <b>Username</b>
+                                <input type="text" placeholder="Enter Username" required>
+                                
+                                <b>Email</b>
+                                <input type="email" placeholder="Enter your email" required>
+                                
+                                <b>Password</b>
+                                <input type="password" placeholder="Enter Password" required>
+                                
+                                <b>Password Confirmation</b>
+                                <input type="password" placeholder="Confirm your Password" required>
+                            
+                                <button class="button_1" type="submit">Signup</button>
+                            </div>
+                        
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('signUpForm').style.display='none'" class="cancelbtn">Cancel</button>
+                            </div>
+                        </form>                
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="navigation">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Courses.html">Courses</a></li>
+                        <li><a class="current" href="About.html">About</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        
+        <!--This is the showcase section-->
+        <section id="showcase">
+            <div class="grid-container-about">
+                <!--Box for image-->
+                <div class="grid-image-about">
+                </div>
+                
+                <!--Box for text-->
+                <div class="grid-text-about">
+                    <p> Ingeniis est illum, ullamco non irure. Ea noster nescius praesentibus ea ea veniam nam anim, ita summis firmissimum ne in noster consequat efflorescere ad eu fore dolore hic cupidatat, in mentitum in incurreret iis anim litteris ut incurreret, legam qui laboris. Ex velit arbitror ullamco et sunt mandaremus non laborum, veniam arbitror admodum iis te magna varias ad eiusmod. Eram arbitrantur appellat culpa cernantur. Sed lorem offendit probant. Voluptate ipsum culpa nam nulla, dolor si ita esse singulis.Aut nisi nam dolore. In noster appellat graviterque est ita tamen nostrud praesentibus ubi aliqua iudicem quo familiaritatem, id de malis magna summis. Iudicem ita tamen tempor, eu et noster possumus, mentitum esse elit iudicem culpa, nam nulla quo velit, ita offendit ne quamquam, ut quorum philosophari nam hic tamen id velit te do magna ab varias. Commodo quorum singulis, do aute possumus, admodum velit enim ita aliqua ubi an lorem litteris. Offendit aliqua officia hic multos ullamco ubi amet varias. Voluptate praesentibus an proident, aliquip legam cillum et culpa. Excepteur esse quorum probant irure, ipsum familiaritatem arbitror culpa ullamco ita laborum de ingeniis ut offendit ex aliquip ut quo vidisse praesentibus se amet deserunt ut doctrina et fugiat cupidatat ita fidelissimae, appellat illum illum quibusdam legam.</p>
+                </div>
+            </div>
+        </section>
+        <!--This is the newsletter section-->
+       <section id="newsletter">
+            <div class="container">
+                <h2>Newletter: </h2>
+                <form>
+                    <input type="email" placeholder="Enter Email..." required>
+                    <button type="submit" class="button_1">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        
+        <!--This is the Course information section-->
+        <section id="aboutCourse">
+            <div class="container">
+                <button onclick="Beginnershow()" class="aboutCourseButton">Beginner V</button>
+                <div id="beginnerinfo" class="aboutCourseinfo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <img alt="Acoustic Guitar" src="Images/Beginner%20Guitar.jpg"> <!--https://pixabay.com/photos/guitar-guitar-player-musician-670087/-->
+                    <a href="Tutorial.html#Beginner"><button class="button_1">Beginner</button></a>
+                </div>
+                
+                <button onclick="Advancedinfo()" class="aboutCourseButton">Advanced V</button>
+                 <div id="advancedinfo" class="aboutCourseinfo">
+                     <p>Legam possumus do summis noster e non summis cohaerescant te occaecat nam cillum deserunt, ita sint culpa ne officia, pariatur ita fugiat mandaremus, nam quo cillum malis illum se eiusmod dolore legam aliquip amet, iudicem de multos ossumus. Elit laborum imitarentur. Veniam incurreret ubi voluptate ne aut quis ut amet, aliquip ipsum est senserit despicationes, voluptate e occaecat. Mentitum velit expetendis. Fugiat efflorescere occaecat fore admodum ea excepteur quem ut tempor exquisitaque se qui magna nam culpa, iis non sunt enim dolore.</p>
+                     <img alt="Black Guitar" src="Images/Advanced%20Guitar.jpg"> <!--https://pixabay.com/photos/guitar-electric-guitar-strings-2472245/-->
+                     <a href="Tutorial.html#Advanced"><button class="button_1">Advanced</button></a>
+                </div>
+                
+                <button onclick="Technicalinfo()" class="aboutCourseButton">Technical V</button>
+                <div id="technicalinfo" class="aboutCourseinfo">
+                    <p>Hic nisi fugiat te senserit, nam varias admodum quibusdam, vidisse familiaritatem ea pariatur ab nam summis aute ex incurreret. Ad elit arbitror, id legam nulla velit arbitror, qui eiusmod illustriora, singulis sunt officia do a tempor ne doctrina ubi incididunt dolore nescius ut litteris velit mentitum in nescius aute de admodum relinqueret. Te ubi culpa fore summis. Doctrina et quem doctrina, admodum cillum noster litteris dolore qui possumus fore aute ea magna, sed dolor tempor voluptatibus, magna id incididunt ut esse, aliquip tamen legam litteris nulla, quid o quibusdam.</p>
+                    <img alt="Technical Guitar Chords" src="Images/Technical%20Guitar.jpg"> <!--https://pixabay.com/photos/guitar-chords-guitar-chords-chord-2199554/-->
+                    <a href="Tutorial.html#Technical"><button class="button_1">Technical</button></a>
+                </div>
+            </div> 
+        </section>
+        
+        <!--This is the footer-->
+       <footer>
+            <div class="container">
+                <a id="contact" href="ContactUs.html"><h3>Contact Us</h3>
+                    <p>Sed ut perspiciatis unde omnis <br>
+                    Sed ut perspiciatis unde omnis<br>
+                    Sed ut perspiciatis unde omnis</p></a>
+                <a href="https://www.youtube.com/"><img alt="Youtube" src="Images/Youtube%20Footer.png"></a> <!--https://pixabay.com/illustrations/youtube-red-social-icon-play-1495277/-->
+                <a href="https://en-gb.facebook.com/"><img alt="Facebook" src="Images/Facebook%20Footer.png"></a> <!--https://pixabay.com/illustrations/facebook-logo-social-network-770688/-->
+                <a href="https://www.instagram.com/"><img alt="Instagram" src="Images/Instagram%20Footer.png"></a> <!--https://pixabay.com/illustrations/instagram-insta-logo-new-images-1675670/-->
+                <a href="https://twitter.com/?lang=en-gb"><img alt="Twitter" src="Images/Twitter%20Footer.png"></a> <!--https://pixabay.com/vectors/twitter-social-media-icon-social-2430933/-->
+            </div>
+            <div>
+                <p id="copy">Guitar tutorials &copy; 2019</p>    
+            </div>
+        </footer>
+        
+        <!-- Script -->
+        <script>
+            //https://www.w3schools.com/howto/howto_css_login_form.asp
+            var modal = document.getElementById('logInForm');
+            var modal2 = document.getElementById('signUpForm');
+            var modal3= document.getElementById('membershipForm');
+            
+            window.onclick = function(event)
+            {
+                if (event.target == modal)
+                {
+                    modal.style.display = "none";
+                }
+                 if (event.target == modal2)
+                {
+                    modal2.style.display = "none";
+                }
+                 if (event.target == modal3)
+                {
+                    modal3.style.display = "none";
+                }
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            
+            //About course section on click dropdown https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+            function Beginnershow() 
+            {
+                var x = document.getElementById("beginnerinfo");
+                
+                if (x.style.display === "block") 
+                {
+                    x.style.display = "none";
+                } 
+                else 
+                {
+                    x.style.display = "block";
+                }
+            }
+            
+            function Advancedinfo() 
+            {
+                var y = document.getElementById("advancedinfo");
+                
+                if (y.style.display === "block") 
+                {
+                    y.style.display = "none";
+                } 
+                else 
+                {
+                    y.style.display = "block";
+                }
+            }
+            
+            function Technicalinfo() 
+            {
+                var z = document.getElementById("technicalinfo");
+                
+                if (z.style.display === "block") 
+                {
+                    z.style.display = "none";
+                } 
+                else 
+                {
+                    z.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>

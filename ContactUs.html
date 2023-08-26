@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Guitar Tutorial | Contact Us</title>
+        <link rel="stylesheet" href="CSS/CSS.css">
+    </head>
+    <body>
+        <!--This is the header-->
+        <header id="topArrowdestination">
+            <a href="#topArrowdestination"><img id="toparrow" alt="Top Arrow" src="Images/Up_Arrow.png"></a> <!--https://pixabay.com/illustrations/app-application-arrow-back-button-1646212/-->
+            <div class="container">
+                <div>
+                    <a href="Index.html"><img alt="Guitar Logo" src="Images/Site%20Logo.png"></a> <!--https://pixabay.com/vectors/retro-floral-flowers-decorative-1254595/-->
+                    <h1><span class="BigTitle">Guitar</span> tutorial</h1>
+                
+                    <!--Login and Signup Forms-->
+                    <button class="button_1" onclick="document.getElementById('logInForm').style.display='block'" style="width:auto;">Login</button>
+        
+                    <div id="logInForm" class="modal">
+                    
+                        <form method="post"  class="from_content">
+                            <div class="popuplogo">
+                              <img src="Images/Site%20Logo.png" alt="Logo" class="loginavatar">
+                            </div>
+                            <div class="container">
+                                
+                                <b>Username</b>
+                                <input type="text" name="usrname" placeholder="Enter Username" required>
+                            
+                                <b>Password</b>
+                                <input type="password" placeholder="Enter Password" required>
+                            
+                                <button class="button_1" type="submit" onclick='check(); return false'>Login</button>
+                                <label>
+                                  <input type="checkbox" checked="checked"> Remember me
+                                </label>
+                            </div>
+                            
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('logInForm').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>              
+                    </div> 
+                
+                 <!-- Sign up form-->
+                <button class="button_1" onclick="document.getElementById('signUpForm').style.display='block'" style="width:auto;">Signup</button>
+        
+                    <div id="signUpForm" class="modal">
+                    
+                        <form method="post"  class="from_content">
+                            <div class="popuplogo">
+                              <img src="Images/Site%20Logo.png" alt="Logo" class="loginavatar">
+                            </div>
+                            <div class="container">
+                                
+                                <b>Username</b>
+                                <input type="text" placeholder="Enter Username" required>
+                                
+                                <b>Email</b>
+                                <input type="email" placeholder="Enter your email" required>
+                                
+                                <b>Password</b>
+                                <input type="password" placeholder="Enter Password" required>
+                                
+                                <b>Password Confirmation</b>
+                                <input type="password" placeholder="Confirm your Password" required>
+                            
+                                <button class="button_1" type="submit">Signup</button>
+                            </div>
+                        
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('signUpForm').style.display='none'" class="cancelbtn">Cancel</button>
+                            </div>
+                        </form>                
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="navigation">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Courses.html">Courses</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a class="current" href="ContactUs.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        
+        <!--This is the comment form section-->
+        <section class="comment">
+            <div class="container">
+                <div class="comment_container">
+                    <div class="form_grid">
+                        <form>
+                            <label><b>Name</b></label> <br>
+                            <input type="text" placeholder="Please enter your name">
+                            
+                            <label><b>Email</b></label> <br>
+                            <input type="email" placeholder="Please enter your emial" required>
+                            
+                            <label><b>Comment</b></label> <br>
+                            <textarea placeholder="Please enter your comment" cols="50" rows="8" required></textarea>
+                            <br>
+                            <button class="button_1" type="submit">Comment</button>
+                        </form>
+                    </div>
+                    <div class="sidebarinfo_grid">
+                        <div class=sidebarinfo>
+                            <h3>Contact Us</h3>
+                            <p>Sed ut perspiciatis unde omnis <br>
+                            Sed ut perspiciatis unde omnis<br>
+                            Sed ut perspiciatis unde omnis<br>
+                            <br>
+                            Sed ut perspiciatis unde omnis <br>
+                            Sed ut perspiciatis unde omnis<br>
+                            Sed ut perspiciatis unde omnis<br>
+                            <br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--This is the newsletter section-->
+       <section id="newsletter">
+            <div class="container">
+                <h2>Newletter: </h2>
+                <form>
+                    <input type="email" placeholder="Enter Email..." required>
+                    <button type="submit" class="button_1">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        
+        <!--This is the footer-->
+       <footer>
+            <div class="container">
+                <a id="contact" href="ContactUs.html"><h3>Contact Us</h3>
+                    <p>Sed ut perspiciatis unde omnis <br>
+                    Sed ut perspiciatis unde omnis<br>
+                    Sed ut perspiciatis unde omnis</p></a>
+                <a href="https://www.youtube.com/"><img alt="Youtube" src="Images/Youtube%20Footer.png"></a> <!--https://pixabay.com/illustrations/youtube-red-social-icon-play-1495277/-->
+                <a href="https://en-gb.facebook.com/"><img alt="Facebook" src="Images/Facebook%20Footer.png"></a> <!--https://pixabay.com/illustrations/facebook-logo-social-network-770688/-->
+                <a href="https://www.instagram.com/"><img alt="Instagram" src="Images/Instagram%20Footer.png"></a> <!--https://pixabay.com/illustrations/instagram-insta-logo-new-images-1675670/-->
+                <a href="https://twitter.com/?lang=en-gb"><img alt="Twitter" src="Images/Twitter%20Footer.png"></a> <!--https://pixabay.com/vectors/twitter-social-media-icon-social-2430933/-->
+            </div>
+            <div>
+                <p id="copy">Guitar tutorials &copy; 2019</p>    
+            </div>
+        </footer>
+        
+        <!-- Script -->
+        <script>
+            //https://www.w3schools.com/howto/howto_css_login_form.asp
+            var modal = document.getElementById('logInForm');
+            var modal2 = document.getElementById('signUpForm');
+            var modal3= document.getElementById('membershipForm');
+            
+            window.onclick = function(event)
+            {
+                if (event.target == modal)
+                {
+                    modal.style.display = "none";
+                }
+                 if (event.target == modal2)
+                {
+                    modal2.style.display = "none";
+                }
+                 if (event.target == modal3)
+                {
+                    modal3.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,784 @@
+:root {
+    --mainfont: calc(15px + .6vw);
+    --infofont: calc(15px + .4vw);
+    --titlefont: calc(35px + .6vw);
+}
+
+body {
+    font: Courier, New Arial;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+p {
+    font-size:var(--mainfont);
+}
+hr {
+    height: 6px;
+    background: hsla(0, 0%, 15%, 1);
+    border-radius: 10px;
+    opacity: 0.5;
+    margin: 0;
+}
+
+/*Global*/
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+.button_1 {
+    background-image: linear-gradient(to top, hsla(261, 71%, 40%, 1), hsla(261, 81%, 45%, 1));
+    padding: 10px 40px;
+    border-radius: 10px;
+    color: hsla(0, 100%, 100%, 1);
+    cursor: pointer;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 20%, 1);
+    font-family: Courier New;
+    text-decoration: none;
+    border: 1px outset;
+    font-size: 13px;
+}
+.button_1:hover {
+    background: hsla(261, 81%, 60%, 1);
+}
+
+/* Pop Up Forms */ /*https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.from_content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.from_content button, .from_content a {
+    margin: 4px 20px 4px 0;
+    float: left;
+    
+}
+.popuplogo {
+    width: 15vw;
+    margin: auto;
+    height: 27%;
+    margin-bottom: 15px;
+}
+.popuplogo img {
+    width: 140px;
+    height: 190px;
+}
+
+/*Pop up form buttons*/
+.cancelbtn {
+    background: hsla(360, 100%, 50%, 1);
+    padding: 10px 40px;
+    border-radius: 10px;
+    color: hsla(0, 100%, 100%, 1);
+    cursor: pointer;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 20%, 1);
+    font-family: Courier New;
+}
+.cancelbtn:hover {
+    background: hsla(360, 81%, 60%, 1);
+}
+.paybtn {
+    background: hsla(118, 70%, 48%, 1);
+    padding: 10px 40px;
+    border-radius: 10px;
+    color: hsla(0, 100%, 100%, 1);
+    cursor: pointer;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 20%, 1);
+    font-family: Courier New;
+}
+.paybtn:hover {
+    background: hsla(118, 81%, 60%, 1);
+}
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] { /*https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp*/
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Styling Pages*/
+/* Header */
+header {
+    background-image: linear-gradient(to bottom, hsla(112, 90%, 58%, 1), hsla(118, 70%, 48%, 1));
+    height: 80px;
+}
+header h1 {
+    padding: 0;
+    margin: 10px;
+    float: left;
+    color: hsla(0, 0%, 0%, 1);
+    font-size: var(--titlefont);
+}
+header img {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 50px;
+    height: 80px
+}
+header button {
+    margin: 20px 5px;
+    float: right;
+    padding: 10px 15px;
+}
+header #toparrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    z-index: 3;
+}
+
+/* Navigation */
+#navigation {
+    background-image: linear-gradient(to top, hsla(112, 70%, 50%, 1), hsla(118, 70%, 48%, 1));
+    height: 70px;
+}
+#navigation .current {
+    font-weight: bold;
+}
+#navigation nav ul {
+    padding: 0;
+    margin-top: 15px;
+    list-style-type: none;
+    float: right;
+}
+#navigation nav ul li {
+    transition: transform 0.1s;
+    float: left;
+    padding: 10px 10px;
+}
+#navigation nav ul li:hover {
+    transform: scale(1.03);
+}
+#navigation nav ul li a {
+    padding: 15px;
+    text-decoration: none;
+    color: hsla(0, 0%, 0%, 1);
+    font-size: var(--infofont);
+    
+}
+#navigation nav ul li a:hover {
+    background: hsla(121, 97%, 30%, 1);
+}
+
+/*Index Page start*/
+/* Showcase */
+#showcase {       
+    margin: 2% auto;
+    width: 95%;
+}
+.grid-container {
+    display: grid;
+    margin: auto;
+    grid-template-areas: 'image_grid text_grid'
+                         'image_grid button_grid';
+    padding: 0;
+    background-image: radial-gradient(circle,hsla(0, 100%, 99%, 1), hsla(0, 0%, 100%, 1), hsla(0, 100%, 99%, 1));
+    border: 3px solid hsla(0, 0%, 0%, 1);
+    box-shadow: 3px 3px 5px hsla(0, 0%, 20%, 1);
+    border-radius: 5px;
+    border-bottom: 2px, solid, hsla:(0, 10%, 85%, 1);
+}
+.grid-image-home {
+    grid-area: image_grid;
+    background: var(--primary);
+    width: 900px;
+    height: 500px;
+    background-image: url(Images/Home_showcase.jpg); /*https://pixabay.com/vectors/retro-floral-flowers-decorative-1254595/*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: -65px 0px;
+    border-right: 2px solid black;
+}
+.grid-text {
+    grid-area: text_grid;
+    display: flex;
+    flex-direction: column;
+    background: purple;
+    height: 374px;
+    font-size: var(--mainfont);
+    color: hsla(0, 100%, 0%, 1);
+    margin: auto;
+    background-image: radial-gradient(circle, hsla(0, 0%, 100%, 1), hsla(0, 100%, 99%, 1));
+}
+.grid-button {
+    grid-area: button_grid;
+    height: 120px;
+}
+#membershipbutton {
+    float: right;
+    margin-right: 17%;
+}
+#showcase p {
+    padding: 65px 80px 0px 80px;
+    font-size:var(--mainfont);
+}
+
+/*News letter*/
+#newsletter {
+    background: hsla(118, 70%, 48%, 1);
+}
+#newsletter h2 {
+    float: left;
+    padding: 0;
+    font-size: var(--titlefont);
+    margin: 20px 0;
+}
+#newsletter input {
+    margin: 25px 0px 0px 8px;
+    max-width: 50vw;
+    float: left;
+}
+#newsletter button {
+    margin: 25px 0px 10px 0;
+    margin-left: 13vw;
+    float: left;
+}
+
+/*Beginner*/
+#beginnerlink {  
+    background-color: hsla(118, 70%, 48%, 1);
+    background-image: url(Images/Beginner_Blur_guitar.jpg); /*https://pixabay.com/photos/blur-guitar-hands-music-1851426/*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60%;
+}
+#beginnerlink p {
+    color: white;
+    padding-top: 7%;
+    margin: 0;
+    margin-left: 50%;
+    float: right;
+}
+#beginnerlink h2 {
+    font-size: var(--titlefont);
+    margin: 0;
+    padding-top: 30px;
+    color: white; 
+    float: left;
+}
+#beginnerlink a {
+    float: right;
+    margin-top: 20px;
+    margin-right: 15%;
+}
+
+/*Video*/
+#videobanner {
+    background: hsla(118, 70%, 48%, 1);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+#video {
+    margin: auto;
+    width: 100%;
+    background: hsla(0, 100%, 100%, 1);
+    background-image: radial-gradient(circle,hsla(0, 100%, 99%, 1), hsla(0, 0%, 100%, 1), hsla(0, 100%, 99%, 1));
+    background-position: bottom;
+}
+#videobanner h1 {
+    margin 0;
+    padding: 0;
+    font-size: var(--titlefont);
+    height: 50px;
+}
+iframe {
+    height: 30vh;
+    width: 27vw;
+}
+
+/*Video grid layout*/
+.video-grid-container {
+    display: grid;
+    margin: auto;
+    grid-template-areas: 'leftvideo centervideo rightvideo'
+                         'videotextgrid videotextgrid videotextgrid';
+}
+.left-video, .center-video, .right-video {
+    margin: auto;
+    padding: 5% 6%;
+    height: 32vh;
+    /*border: 3px solid red;*/
+}
+.left-video {
+    grid-area: leftvideo;
+}
+.center-video {
+    grid-area: centervideo;
+}
+.right-video {
+    grid-area: rightvideo;
+}
+.video-text-grid {
+    grid-area: videotextgrid;
+}
+
+/*Detailes tabs*/
+.tablink {
+    color: hsla(234, 91%, 50%, 1);
+    background: hsla(0, 100%, 100%, 1);
+    text-decoration: underline;
+    float: left;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 1rem;
+    width: 33.3%;
+}
+.tabcontent {
+    color: black;
+    background: hsla(0, 20%, 95%, 1);
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+.tablink:hover {
+  background: hsla(0, 3%, 90%, 1);
+}
+/*Index page end*/
+
+/*Courses page start*/
+/*Course showcase*/
+.grid-image-courses {
+    grid-area: image_grid;
+    background: hsla(118, 70%, 48%, 1);
+    width: 800px;
+    height: 600px;
+    background-image: url(Images/Guitar_on_chair.jpg); /*https://pixabay.com/photos/guitar-music-acoustic-guitar-1836655/*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: -100px 0px;
+    border-right: 2px solid black;
+}
+/*Course info*/
+#Courseinfo {
+    background: hsla(0, 100%, 100%, 1);
+}
+.Courseinfo_background {
+    background: hsla(0, 10%, 85%, 1);
+    padding: 0 15px 15px 15px;
+}
+.Courseinfo_background p {
+}
+.Courseinfo_background h4 {
+    font-size:var(--mainfont);
+    font-weight: normal;
+    margin: 10px 0 10px 0;
+    padding-top: 15px;
+    
+}
+#Courseinfo h3 {
+    width: 100%; 
+    text-align: center;
+    background: hsla(0, 10%, 85%, 1);
+    padding: 0;
+    margin: 20px 0 0 0 ;
+    font-size: var(--mainfont);
+}
+/*Courses page end*/
+
+/*Tutorial page start*/
+/*Tutorial info*/
+.tutorialTitle{
+    background: hsla(118, 70%, 48%, 1);
+    margin: 40px 0 10px 0;
+}
+.tutorialContainer {
+    width: 80%;
+    margin: 0 0 0 10px;
+}
+#Tutorialinfo h2 {
+    margin: 20px 0 20px 7%;
+}
+#Tutorialinfo p, h3 {
+    background: hsla(0, 10%, 85%, 1);
+}
+#Tutorialinfo p {
+    padding: 25px;
+}
+#Tutorialinfo h3 {
+    padding: 10px 25px;
+    margin: 10px 0 0 0;
+    font-size: var(--mainfont);
+}
+
+/*Tutorial grid*/
+.Tutorialinfo_grid_container {
+    display: grid;
+    margin: auto;
+    grid-template-areas: 'Tutorialtext Tutorialvideo'
+}
+.Tutoialinfo_text {
+    grid-area: Tutorialtext;
+}
+.Tutorialinfo_video {
+    grid-area: Tutorialvideo;
+    margin: auto;
+}
+.Tutorialinfo_video, .Tutoialinfo_text {
+    /*border: 3px solid red;*/
+}
+
+/*Side bar*/
+.hyperlinkasidebar {
+    background: hsla(0, 0%, 80%, 1); 
+    float: right;
+    position: fixed;
+    bottom: calc(60px + 8vh);
+    right: 20px;
+    padding: 0;
+    z-index: 3;
+}
+.hyperlinkasidebar ul {
+    list-style: none;
+}
+.hyperlinkasidebar ul li ul li a, .hyperlinkasidebar ul li a   {
+    text-decoration: none;
+    color: hsla(0, 0%, 0%, 1);
+}
+.hyperlinkasidebar ul li ul li a:hover, .hyperlinkasidebar ul li a:hover {
+    color: hsla(0, 10%, 50%, 1);
+}
+.hyperlinkasidebar ul li ul li {
+    list-style: square;
+}
+
+/*Page overlay for advanced and technical*/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: calc(4995px - 127vw);
+    background: hsla(0, 0%, 0%, 0.92);
+    top: calc(3380px - 30vw);
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/*Tutorial page end*/
+
+/*About page start*/
+/*Showcase*/
+.grid-container-about {
+    display: grid;
+    margin: auto;
+    grid-template-areas: 'image_grid_about text_grid_about';
+    padding: 0;
+    background-image: radial-gradient(circle,hsla(0, 100%, 99%, 1), hsla(0, 0%, 100%, 1), hsla(0, 100%, 99%, 1));
+    border: 3px solid hsla(0, 0%, 0%, 1);
+    box-shadow: 3px 3px 5px hsla(0, 0%, 20%, 1);
+    border-radius: 5px;
+    border-bottom: 2px, solid, hsla:(0, 10%, 85%, 1);
+}
+.grid-image-about, .grid-text-about {
+    /*border: 3px solid red;*/
+}
+.grid-image-about{
+    grid-area: image_grid_about;
+    background: hsla(118, 70%, 48%, 1);
+    width: 800px;
+    height: 584px;
+    background-image: url(Images/Guitars_on_wall.jpg); /*https://pixabay.com/photos/wall-display-black-and-white-guitar-2605478/*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: -65px 0px;
+    border-right: 2px solid black;
+}
+.grid-text-about {
+    grid-area: text_grid_about;
+    display: flex; 
+    flex-direction: column;
+    background: purple;
+    font-size: var(--mainfont);
+    color: hsla(0, 100%, 0%, 1);
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(circle, hsla(0, 0%, 100%, 1), hsla(0, 100%, 99%, 1));
+}
+.grid-text-about p {
+    margin: 0 0 75px 0;
+    padding: 0;
+}
+
+/*About Course*/
+#aboutCourse {
+    background: hsla(0, 0%, 100%, 1);
+}
+.aboutCourseButton {
+    background: hsla(0, 10%, 85%, 1);
+    font-size: var(--mainfont);
+    font-family: Courier New;
+    width: 100%;
+    margin: 20px auto 5px auto;
+    border: none;
+    text-decoration: underline;
+    color: hsla(234, 91%, 50%, 1);
+    cursor: pointer;
+}
+.aboutCourseinfo {
+    background: hsla(0, 10%, 85%, 1);
+    font-size: var(--infofont);
+    display: none;
+}
+.aboutCourseinfo p {
+    margin: 20px 0 0 20px;
+    float: left; 
+    width: 50%;
+}
+.aboutCourseinfo img {
+    float: left;
+    height: 23vw;
+    width: 30vw;
+    margin: 4% 0 0 6%; 
+}
+.aboutCourseinfo button {
+    margin: calc(318px - 22vw) 0 20px 30px;
+}
+/*About page end*/
+
+/*Contact us page start*/
+/*contact us grid css*/
+.comment_container {
+    display: grid;
+    margin: auto;
+    grid-template-areas: 'form_box sidebarinfo_box';
+    grid-gap: 1vw;
+}
+.form_grid {
+    grid-area: form_box;
+}
+.sidebarinfo_grid {
+    grid-area: sidebarinfo_box;
+}
+
+/*contact us side box info*/
+.sidebarinfo {
+    margin: auto;
+}
+.sidebarinfo h3, .sidebarinfo p {
+    text-align: center;
+    margin: 1px 0 0 0;
+}
+.sidebarinfo h3 {
+    margin: 25px 0 0 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.sidebarinfo p {
+    background: hsla(0, 0%, 60%, 1);
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.sidebarinfo hr {
+    margin: 0;
+}
+
+/*contact us form css*/
+.comment form {
+    margin: 10px 0;
+}
+.comment textarea {
+    resize: none;
+}
+.comment label {
+    margin: 0;
+}
+.comment button {
+    margin-top: 10px;
+}
+/*Contact us page end*/
+
+/* Footer */
+footer {
+    margin-top: 15px;
+    background: hsla(0, 0%, 40%, 1);
+}
+footer img {
+    float: right;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 0px 15px;
+    height: 65px;
+    width: 65px;
+}
+footer #contact {
+    margin: 10px 0px;
+    padding: 0px 5px;
+    float: left;
+    background: hsla(0, 0%, 30%, 1);
+    cursor: pointer;
+    text-decoration: none;
+    color: hsla(0, 0%, 0%, 1)
+}
+footer p, footer #copy {
+    font-size: 1rem;
+} 
+
+footer h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    background: hsla(0, 0%, 30%, 1);
+    
+}
+footer p {
+    margin: 0px;
+    padding: 0px;
+}
+footer #copy {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background: hsla(0, 0%, 30%, 1);
+}
+
+/*Media queries*/
+@media(max-width: 1700px) {
+    /*Showcase*/
+    .grid-container {
+        grid-template-areas: 'image_grid' 
+                             'text_grid'
+                             'button_grid';
+    }
+    .grid-container-about {
+        grid-template-areas: 'image_grid_about'
+                             'text_grid_about';
+    }
+    .grid-image-home {
+        border-right: none;
+        height: 52vw;
+        width: auto;
+    }
+    .grid-image-courses {
+        border-right: none;
+        height: 55vw;
+        background-position: 0px -10px;
+        width: auto;
+    }
+    .grid-image-about {
+        border-right: none;
+        height: 55vw;
+        background-position: 0px -10px;
+        width: auto;
+    }
+    .grid-text{
+        height: calc(420px - 7.5vw);
+    }
+    #membershipbutton {
+        margin-right: 35vw;
+    }
+    /*Showcase end*/
+    
+    /*Newletter*/
+    #newsletter button {
+        margin-left: 10px;
+    }
+    /*Newsletter end*/
+    
+    /*Beginner*/
+    #beginnerlink {
+        height: calc(600px - 10vw);
+    }
+    /*Beginner end*/
+}
+
+@media(max-width: 690px) {
+    /*Header section*/
+    header button {
+        margin: 0 10vw 100px 4vw;
+        float: left;
+    }
+    
+    /*Navigation seciton*/
+    #navigation {
+        padding-top: 50px;
+        height: 100px;
+    }
+    
+    /*Home page*/
+    .grid-text{
+        height: calc(450px - 7.5vw);
+    }
+    
+    /*Tutorail page*/
+    .Tutorialinfo_grid_container {
+    grid-template-areas: 'Tutorialtext' 
+                         'Tutorialvideo';
+    }
+    .tutorialContainer {
+        width: 98%
+    }
+    .Tutorialinfo_video iframe {
+        width: 300px;
+        height: 200px;
+    }
+    .hyperlinkasidebar {
+        display: none;
+    }
+    
+    /*About page*/
+    .aboutCourseinfo p {
+        margin: 20px 0 0 20px;
+        float: left; 
+        width: 93%;
+    }
+    .aboutCourseinfo img {
+        width: 300px;
+        height: 250px;
+        margin: 10px 11vw;
+    }
+    .aboutCourseinfo button {
+        margin: 10px 0 20px 30px;
+    }
+    
+    /*Contact us page*/
+    .sidebarinfo {
+        display: none;
+    }
+}

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Guitar Tutorial | Welcome</title>
+        <link rel="stylesheet" href="CSS/CSS.css">
+    </head>
+    <body>
+        <!--This is the header-->
+        <header id="topArrowdestination">
+            <a href="#topArrowdestination"><img id="toparrow" alt="Top Arrow" src="Images/Up_Arrow.png"></a> <!--https://pixabay.com/illustrations/app-application-arrow-back-button-1646212/-->
+            <div class="container">
+                <div>
+                    <a href="Index.html"><img alt="Guitar Logo" src="Images/Site%20Logo.png"></a> <!--https://pixabay.com/vectors/retro-floral-flowers-decorative-1254595/-->
+                    <h1><span class="BigTitle">Guitar</span> tutorial</h1>
+                
+                    <!--Login and Signup Forms-->
+                    <button class="button_1" onclick="document.getElementById('logInForm').style.display='block'" style="width:auto;">Login</button>
+        
+                    <div id="logInForm" class="modal">
+                    
+                        <form method="post"  class="from_content">
+                            <div class="popuplogo">
+                              <img src="Images/Site%20Logo.png" alt="Logo" class="loginavatar">
+                            </div>
+                            <div class="container">
+                                
+                                <b>Username</b>
+                                <input type="text" name="usrname" placeholder="Enter Username" required>
+                            
+                                <b>Password</b>
+                                <input type="password" placeholder="Enter Password" required>
+                            
+                                <button class="button_1" type="submit" onclick='check(); return false'>Login</button>
+                                <label>
+                                  <input type="checkbox" checked="checked"> Remember me
+                                </label>
+                            </div>
+                            
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('logInForm').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>              
+                    </div> 
+                
+                 <!-- Sign up form-->
+                <button class="button_1" onclick="document.getElementById('signUpForm').style.display='block'" style="width:auto;">Signup</button>
+        
+                    <div id="signUpForm" class="modal">
+                    
+                        <form method="post"  class="from_content">
+                            <div class="popuplogo">
+                              <img src="Images/Site%20Logo.png" alt="Logo" class="loginavatar">
+                            </div>
+                            <div class="container">
+                                
+                                <b>Username</b>
+                                <input type="text" placeholder="Enter Username" required>
+                                
+                                <b>Email</b>
+                                <input type="email" placeholder="Enter your email" required>
+                                
+                                <b>Password</b>
+                                <input type="password" placeholder="Enter Password" required>
+                                
+                                <b>Password Confirmation</b>
+                                <input type="password" placeholder="Confirm your Password" required>
+                            
+                                <button class="button_1" type="submit">Signup</button>
+                            </div>
+                        
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('signUpForm').style.display='none'" class="cancelbtn">Cancel</button>
+                            </div>
+                        </form>                
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="navigation">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a class="current" href="Index.html">Home</a></li>
+                        <li><a href="Courses.html">Courses</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        
+        <!--This is the showcase section-->
+        <section id="showcase">
+            <div class="grid-container">
+                <!--Box for image-->
+                <div class="grid-image-home">
+                </div>
+                
+                <!--Box for text-->
+                <div class="grid-text">
+                    <p>
+                        quae ea enim esse quem praetermissum praesentibus fore ad quis graviterque 
+                        fugiat consequat fugiat o dolore quis familiaritatem et distinguantur do nescius 
+                        quis doctrina esse ne aut quamquam multos est duis est ab deserunt hic offendit 
+                        o ullamco cernantur vidisse. quae ea enim esse quem praetermissum praesentibus fore ad quis graviterque 
+                        fugiat consequat fugiat o dolore quis familiaritatem et distinguantur do nescius 
+                        quis doctrina esse ne aut quamquam multos est duis est ab deserunt hic offendit 
+                        o ullamco cernantur vidisse.
+                    </p>
+                </div>
+                
+                <!--Box for button-->
+                <div class="grid-button">
+                    <button id="membershipbutton" class="button_1" onclick="document.getElementById('membershipForm').style.display='block'" style="width:auto;">Membership</button>
+    
+                    <div id="membershipForm" class="modal">
+                    
+                        <form method="post" class="from_content">
+                            <div class="container">
+                                
+                                <label><b>Card Name</b></label>
+                                <input type="text" placeholder="Enter Name on card" required>
+                                <br>
+                                <label><b>Card Number</b></label>
+                                <input type="number" placeholder="Enter Card Number" required>
+                                <br>
+                                <label><b>Card Expiry date</b></label>
+                                <input type="date" value required>
+                                <br>
+                                <label><b>Card Security Number</b></label>
+                                <input type="number" placeholder="000" required>
+                                <br>
+                                <button class="paybtn" type="submit">Pay</button>
+                                <a href="Courses.html" class="button_1">Continue</a>
+                                <div class="container" style="background-color:#f1f1f1">
+                                    <button type="button" onclick="document.getElementById('membershipForm').style.display='none'" class="cancelbtn">Cancel</button>
+                                </div>                        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--This is the newsletter section-->
+        <section id="newsletter">
+            <div class="container">
+                <h2>Newletter: </h2>
+                <form>
+                    <input type="email" placeholder="Enter Email..." required>
+                    <button type="submit" class="button_1">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        
+        <!--This is the beginner section-->
+        <section id="beginnerlink">
+            <div class="container">
+                <h2>Beginner Tutorials</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div>
+                <a href=Tutorial.html#Beginner class="button_1">Tutorials</a>
+            </div>
+        </section>
+        <!--This is the video section-->
+        <section id=videobanner>
+            <div class="container">
+                <h2>New Videos</h2>
+            </div>
+        </section>
+            
+        <section id="video">
+            <div class="video-grid-container">
+                <!--The Three video boxes-->
+                <div class="left-video">
+                    <iframe src="https://www.youtube.com/embed/C0DPdy98e4c"></iframe>
+                </div>
+                <div class="center-video">
+                    <iframe src="https://www.youtube.com/embed/C0DPdy98e4c"></iframe>
+                </div>
+                <div class="right-video">
+                    <iframe src="https://www.youtube.com/embed/C0DPdy98e4c"></iframe>
+                </div>
+            
+            <!--Video tabs and text-->
+            <!--Tabs-->
+                <div class="video-text-grid">
+                    <button class="tablink" onclick="openCity('Video1', this, 'hsla(0, 20%, 95%, 1)')" id="defaultOpen">Details V</button>
+                    <button class="tablink" onclick="openCity('Video2', this, 'hsla(0, 20%, 95%, 1)')">Details V</button>
+                    <button class="tablink" onclick="openCity('Video3', this, 'hsla(0, 20%, 95%, 1)')">Details V</button>
+                                
+                    <!--Information-->
+                    
+                    <div id="Video1" class="tabcontent">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra urna sem. In sed lacus nulla. Etiam mollis pellentesque congue. Vivamus aliquet diam in sapien malesuada, sed semper velit cursus. Vivamus placerat, leo eu sodales pellentesque, lectus quam vehicula tellus, quis blandit lectus orci eu mi. Curabitur maximus rhoncus lectus, et porta libero viverra quis. Quisque interdum massa et eros tempus, quis hendrerit enim convallis.</p>
+                    </div>
+                    <div id="Video2" class="tabcontent"> 
+                        <p>Maecenas vel ipsum augue. Aenean sollicitudin, velit non porta sollicitudin, massa ipsum finibus elit, in interdum neque metus ut massa. Aliquam vitae purus in nisi venenatis consectetur vitae quis nisi. Sed accumsan lectus eget turpis suscipit elementum. Sed maximus iaculis libero nec vestibulum. Etiam nunc sem, bibendum et porttitor nec, tristique nec felis. Maecenas venenatis dapibus justo.</p>
+                    </div>
+                    <div id="Video3" class="tabcontent">
+                        <p>Pellentesque ante arcu, congue at elit vitae, varius placerat leo. Sed aliquet rutrum mauris, eu luctus nisi congue ut. Aenean pellentesque tortor id justo sollicitudin suscipit sollicitudin at tellus. Nullam viverra enim ut eros efficitur, at lobortis orci commodo. Nunc lacinia sed erat et accumsan. Duis in lobortis dolor. Vestibulum vulputate sed sem rutrum tempus. Nullam suscipit, mauris non dictum gravida, tellus ex ultrices nunc, non tincidunt turpis lorem ac mauris. Integer fermentum volutpat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--This is the footer-->
+        <footer>
+            <div class="container">
+                <a id="contact" href="ContactUs.html"><h3>Contact Us</h3>
+                    <p>Sed ut perspiciatis unde omnis <br>
+                    Sed ut perspiciatis unde omnis<br>
+                    Sed ut perspiciatis unde omnis</p></a>
+                <a href="https://www.youtube.com/"><img alt="Youtube" src="Images/Youtube%20Footer.png"></a> <!--https://pixabay.com/illustrations/youtube-red-social-icon-play-1495277/-->
+                <a href="https://en-gb.facebook.com/"><img alt="Facebook" src="Images/Facebook%20Footer.png"></a> <!--https://pixabay.com/illustrations/facebook-logo-social-network-770688/-->
+                <a href="https://www.instagram.com/"><img alt="Instagram" src="Images/Instagram%20Footer.png"></a> <!--https://pixabay.com/illustrations/instagram-insta-logo-new-images-1675670/-->
+                <a href="https://twitter.com/?lang=en-gb"><img alt="Twitter" src="Images/Twitter%20Footer.png"></a> <!--https://pixabay.com/vectors/twitter-social-media-icon-social-2430933/-->
+            </div>
+            <div>
+                <p id="copy">Guitar tutorials &copy; 2019</p>    
+            </div>
+        </footer>
+        
+        <!-- Script -->
+        <script>
+            //https://www.w3schools.com/howto/howto_css_login_form.asp
+            var modal = document.getElementById('logInForm');
+            var modal2 = document.getElementById('signUpForm');
+            var modal3= document.getElementById('membershipForm');
+            
+            window.onclick = function(event)
+            {
+                if (event.target == modal)
+                {
+                    modal.style.display = "none";
+                }
+                 if (event.target == modal2)
+                {
+                    modal2.style.display = "none";
+                }
+                 if (event.target == modal3)
+                {
+                    modal3.style.display = "none";
+                }
+            }
+            
+            //Video tab menu https://www.w3schools.com/w3css/w3css_tabulators.asp
+            function openCity(detailsname,elmnt,color) 
+            {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) 
+                {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++)
+                {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(detailsname).style.display = "block";
+                elmnt.style.backgroundColor = color;
+            }
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </body>
+</html>        
